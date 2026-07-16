@@ -1,0 +1,298 @@
+.main {
+  min-height: 100svh;
+  padding-top: var(--navbar-h);
+}
+
+.inner {
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Top header */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+.sub strong { color: var(--color-accent); }
+
+/* Progress summary */
+.summaryCard {
+  background: var(--grad-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.summaryText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 180px;
+}
+
+.summaryLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.summaryValue {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.progressBar {
+  flex: 1;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition);
+}
+
+.summaryPercent {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-accent);
+  min-width: 42px;
+  text-align: right;
+}
+
+/* Section */
+.section { display: flex; flex-direction: column; gap: var(--space-lg); }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sectionSub {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin-top: calc(var(--space-sm) * -1);
+}
+
+.empty {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Módulos */
+.modulosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.moduloCard {
+  background: var(--grad-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.moduloHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.moduloTitulo {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.moduloPercent {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.progressBarSm {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+  margin-bottom: var(--space-xs);
+}
+
+.progressFillSm {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition);
+}
+
+.aulasList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.aulaItem { border-top: 1px solid var(--color-border); }
+.aulaItem:first-child { border-top: none; }
+
+.aulaLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.aulaConcluida {
+  color: var(--color-text);
+  text-decoration: line-through;
+  text-decoration-color: var(--color-success);
+}
+
+/* Mentoria */
+.minhasMentorias {
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.25);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.minhasMentoriasLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.minhasMentoriasList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  padding-left: var(--space-md);
+  list-style: disc;
+}
+
+.mentoriaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.mentoriaCard {
+  background: var(--grad-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  box-shadow: var(--shadow-card);
+}
+
+.mentoriaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.mentoriaData {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.badgeVagas,
+.badgeReservado {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badgeVagas {
+  background: rgba(56,189,248,0.12);
+  color: var(--color-accent2);
+  border: 1px solid rgba(56,189,248,0.3);
+}
+
+.badgeReservado {
+  background: rgba(16,185,129,0.12);
+  color: var(--color-success);
+  border: 1px solid rgba(16,185,129,0.3);
+}
+
+.mentoriaTema {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mentoriaMentor {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.mentoriaBtn { width: 100%; }
+
+@media (max-width: 600px) {
+  .summaryCard { flex-wrap: wrap; }
+  .progressBar { order: 3; width: 100%; }
+}

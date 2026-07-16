@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Button from '../Button/Button.jsx'
+import { useAuth } from '../../context/AuthContext.jsx'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
@@ -14,6 +15,13 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
+  const { usuario, sair } = useAuth()
+  const navigate = useNavigate()
+
+  const handleSair = () => {
+    sair()
+    navigate('/')
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -61,9 +69,23 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className={styles.actions}>
-          <Link to="/matricula">
-            <Button size="sm">Matricule-se</Button>
-          </Link>
+          {usuario ? (
+            <>
+              <Link to="/area-do-aluno">
+                <Button variant="outline" size="sm">Área do Aluno</Button>
+              </Link>
+              <Button variant="ghost" size="sm" onClick={handleSair}>Sair</Button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <Button variant="ghost" size="sm">Entrar</Button>
+              </Link>
+              <Link to="/matricula">
+                <Button size="sm">Matricule-se</Button>
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Hamburger */}
@@ -88,11 +110,33 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
-              <Link to="/matricula" className={styles.mobileCta}>
-                Matricule-se Agora →
-              </Link>
-            </li>
+            {usuario ? (
+              <>
+                <li>
+                  <Link to="/area-do-aluno" className={styles.mobileLink}>
+                    Área do Aluno
+                  </Link>
+                </li>
+                <li>
+                  <button type="button" className={styles.mobileCta} onClick={handleSair}>
+                    Sair
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/login" className={styles.mobileLink}>
+                    Entrar
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/matricula" className={styles.mobileCta}>
+                    Matricule-se Agora →
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </div>

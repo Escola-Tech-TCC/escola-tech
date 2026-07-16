@@ -54,6 +54,12 @@
 /* Nav */
 .nav { display: flex; flex: 1; justify-content: center; }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
 .navList {
   display: flex;
   gap: var(--space-xl);

@@ -336,4 +336,6 @@ psd
 thumb
 sketch
 
+.Identifier
+
 # End of https://www.toptal.com/developers/gitignore/api/node,react,python,meteorjs

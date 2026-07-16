@@ -73,6 +73,202 @@ export const cursos = [
   },
 ]
 
+// Módulos e aulas de cada curso — usados na Área do Aluno.
+export const modulosPorCurso = {
+  'Desenvolvimento Web Full Stack': [
+    {
+      id: 'fs-m1',
+      titulo: 'Fundamentos de HTML & CSS',
+      aulas: [
+        { id: 'fs-m1-a1', titulo: 'Estrutura semântica com HTML5' },
+        { id: 'fs-m1-a2', titulo: 'Layout com Flexbox e Grid' },
+        { id: 'fs-m1-a3', titulo: 'Responsividade e Media Queries' },
+      ],
+    },
+    {
+      id: 'fs-m2',
+      titulo: 'JavaScript Moderno',
+      aulas: [
+        { id: 'fs-m2-a1', titulo: 'ES6+: arrow functions, destructuring, spread' },
+        { id: 'fs-m2-a2', titulo: 'Assincronismo: Promises e async/await' },
+        { id: 'fs-m2-a3', titulo: 'Manipulação de DOM e eventos' },
+      ],
+    },
+    {
+      id: 'fs-m3',
+      titulo: 'React & Next.js',
+      aulas: [
+        { id: 'fs-m3-a1', titulo: 'Componentes, props e state' },
+        { id: 'fs-m3-a2', titulo: 'Hooks: useState, useEffect, custom hooks' },
+        { id: 'fs-m3-a3', titulo: 'Roteamento e renderização com Next.js' },
+      ],
+    },
+    {
+      id: 'fs-m4',
+      titulo: 'Node.js, Banco de Dados & Deploy',
+      aulas: [
+        { id: 'fs-m4-a1', titulo: 'API REST com Node.js e Express' },
+        { id: 'fs-m4-a2', titulo: 'Modelagem com PostgreSQL' },
+        { id: 'fs-m4-a3', titulo: 'Deploy em produção na nuvem' },
+      ],
+    },
+  ],
+  'Python para Dados & IA': [
+    {
+      id: 'py-m1',
+      titulo: 'Python Avançado',
+      aulas: [
+        { id: 'py-m1-a1', titulo: 'Estruturas de dados e compreensões' },
+        { id: 'py-m1-a2', titulo: 'Programação orientada a objetos' },
+        { id: 'py-m1-a3', titulo: 'Ambientes virtuais e boas práticas' },
+      ],
+    },
+    {
+      id: 'py-m2',
+      titulo: 'Pandas & NumPy',
+      aulas: [
+        { id: 'py-m2-a1', titulo: 'Manipulação de DataFrames' },
+        { id: 'py-m2-a2', titulo: 'Limpeza e tratamento de dados' },
+        { id: 'py-m2-a3', titulo: 'Álgebra vetorial com NumPy' },
+      ],
+    },
+    {
+      id: 'py-m3',
+      titulo: 'Machine Learning',
+      aulas: [
+        { id: 'py-m3-a1', titulo: 'Regressão e classificação com scikit-learn' },
+        { id: 'py-m3-a2', titulo: 'Validação de modelos e métricas' },
+        { id: 'py-m3-a3', titulo: 'Introdução a APIs de IA e LLMs' },
+      ],
+    },
+  ],
+  'UI/UX Design System': [
+    {
+      id: 'ux-m1',
+      titulo: 'Fundamentos de UX Research',
+      aulas: [
+        { id: 'ux-m1-a1', titulo: 'Entrevistas e personas' },
+        { id: 'ux-m1-a2', titulo: 'Jornada do usuário' },
+        { id: 'ux-m1-a3', titulo: 'Testes de usabilidade' },
+      ],
+    },
+    {
+      id: 'ux-m2',
+      titulo: 'Figma Avançado & Design System',
+      aulas: [
+        { id: 'ux-m2-a1', titulo: 'Componentes e variantes' },
+        { id: 'ux-m2-a2', titulo: 'Auto layout e design tokens' },
+        { id: 'ux-m2-a3', titulo: 'Bibliotecas compartilhadas' },
+      ],
+    },
+    {
+      id: 'ux-m3',
+      titulo: 'Prototipação de Alta Fidelidade',
+      aulas: [
+        { id: 'ux-m3-a1', titulo: 'Fluxos interativos' },
+        { id: 'ux-m3-a2', titulo: 'Handoff para desenvolvimento' },
+        { id: 'ux-m3-a3', titulo: 'Apresentação de portfólio' },
+      ],
+    },
+  ],
+  'DevOps & Cloud Engineering': [
+    {
+      id: 'do-m1',
+      titulo: 'Docker & Kubernetes',
+      aulas: [
+        { id: 'do-m1-a1', titulo: 'Containers e imagens Docker' },
+        { id: 'do-m1-a2', titulo: 'Orquestração com Kubernetes' },
+        { id: 'do-m1-a3', titulo: 'Redes e volumes' },
+      ],
+    },
+    {
+      id: 'do-m2',
+      titulo: 'CI/CD Pipelines',
+      aulas: [
+        { id: 'do-m2-a1', titulo: 'Integração contínua' },
+        { id: 'do-m2-a2', titulo: 'Deploy automatizado' },
+        { id: 'do-m2-a3', titulo: 'Testes em pipeline' },
+      ],
+    },
+    {
+      id: 'do-m3',
+      titulo: 'AWS/GCP & Terraform',
+      aulas: [
+        { id: 'do-m3-a1', titulo: 'Fundamentos de nuvem' },
+        { id: 'do-m3-a2', titulo: 'Infraestrutura como código' },
+        { id: 'do-m3-a3', titulo: 'Monitoramento e custos' },
+      ],
+    },
+  ],
+  'Mobile com React Native': [
+    {
+      id: 'rn-m1',
+      titulo: 'Fundamentos do React Native',
+      aulas: [
+        { id: 'rn-m1-a1', titulo: 'Componentes nativos e estilização' },
+        { id: 'rn-m1-a2', titulo: 'Navegação entre telas' },
+        { id: 'rn-m1-a3', titulo: 'Expo e ambiente de desenvolvimento' },
+      ],
+    },
+    {
+      id: 'rn-m2',
+      titulo: 'Integração com APIs',
+      aulas: [
+        { id: 'rn-m2-a1', titulo: 'Consumo de APIs REST' },
+        { id: 'rn-m2-a2', titulo: 'Armazenamento local' },
+        { id: 'rn-m2-a3', titulo: 'Push notifications' },
+      ],
+    },
+    {
+      id: 'rn-m3',
+      titulo: 'Publicação nas Lojas',
+      aulas: [
+        { id: 'rn-m3-a1', titulo: 'Build para iOS e Android' },
+        { id: 'rn-m3-a2', titulo: 'Publicação na App Store e Play Store' },
+        { id: 'rn-m3-a3', titulo: 'Monitoramento pós-lançamento' },
+      ],
+    },
+  ],
+  'Segurança e Ethical Hacking': [
+    {
+      id: 'sec-m1',
+      titulo: 'Fundamentos de Redes & Segurança',
+      aulas: [
+        { id: 'sec-m1-a1', titulo: 'Protocolos e arquitetura de redes' },
+        { id: 'sec-m1-a2', titulo: 'Criptografia aplicada' },
+        { id: 'sec-m1-a3', titulo: 'OWASP Top 10' },
+      ],
+    },
+    {
+      id: 'sec-m2',
+      titulo: 'Pentest na Prática',
+      aulas: [
+        { id: 'sec-m2-a1', titulo: 'Reconhecimento e enumeração' },
+        { id: 'sec-m2-a2', titulo: 'Exploração de vulnerabilidades' },
+        { id: 'sec-m2-a3', titulo: 'Relatórios de pentest' },
+      ],
+    },
+    {
+      id: 'sec-m3',
+      titulo: 'CTF & Certificações',
+      aulas: [
+        { id: 'sec-m3-a1', titulo: 'Desafios CTF guiados' },
+        { id: 'sec-m3-a2', titulo: 'Preparação para certificações' },
+        { id: 'sec-m3-a3', titulo: 'Projeto final de segurança' },
+      ],
+    },
+  ],
+}
+
+// Horários de mentoria disponíveis para reserva na Área do Aluno.
+export const mentoriaSlots = [
+  { id: 'mt1', data: '22/07/2026', hora: '19:00', mentor: 'Camila Souza', tema: 'Carreira em Frontend', vagas: 5 },
+  { id: 'mt2', data: '23/07/2026', hora: '20:00', mentor: 'Rafael Mendes', tema: 'Dados & Machine Learning', vagas: 4 },
+  { id: 'mt3', data: '24/07/2026', hora: '18:30', mentor: 'Juliana Costa', tema: 'Portfólio de UX Design', vagas: 6 },
+  { id: 'mt4', data: '25/07/2026', hora: '19:30', mentor: 'Lucas Ferreira', tema: 'Preparação para entrevistas técnicas', vagas: 3 },
+  { id: 'mt5', data: '29/07/2026', hora: '20:00', mentor: 'Equipe Escola Tech', tema: 'Dúvidas gerais & code review', vagas: 8 },
+]
+
 export const depoimentos = [
   {
     id: 1,
